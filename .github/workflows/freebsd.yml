@@ -12,6 +12,6 @@ jobs:
       id: test
       uses: vmactions/freebsd-vm@v0.1.5
       with:
-        prepare: pkg install -y golangci-lint
+        prepare: pkg install -y go golangci-lint
         run: |
           make test
