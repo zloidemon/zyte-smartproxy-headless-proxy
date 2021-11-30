@@ -1,0 +1,17 @@
+name: Test on FreeBSD
+
+on: [push]
+
+jobs:
+  testfreebsd:
+    runs-on: macos-10.15
+    name: Run tests on FreeBSD
+    steps:
+    - uses: actions/checkout@v2
+    - name: Test in FreeBSD
+      id: test
+      uses: vmactions/freebsd-vm@v0.1.5
+      with:
+        prepare: pkg install -y golangci-lint
+        run: |
+          make test
