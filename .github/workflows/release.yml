@@ -21,4 +21,4 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: Release.txt
-          name: ${{ format('v{0}', github.tag_name) }}
+          name: v${{ github.ref }}
