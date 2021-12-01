@@ -14,10 +14,10 @@ jobs:
           go-version: ${{ matrix.go-version }}
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Run tests
-        run: make test
       - name: Lint
         uses: golangci/golangci-lint-action@v2.5.2
         with:
           version: v1.31
           args: --config=.golangci.toml
+      - name: Run tests
+        run: make test
