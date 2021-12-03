@@ -18,6 +18,8 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           name: v${{ github.ref_name }}
+          files: |
+            ccbuilds/crawlera-headless-proxy-*
 
   push_to_registry:
     name: Push Docker image to Docker Hub
