@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: Cross build and publish release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
