@@ -18,7 +18,7 @@ jobs:
         run: make test
   testingfreebsd:
     runs-on: macos-10.15
-    name: Run tests on FreeBSD
+    name: testing (FreeBSD)
     steps:
     - uses: actions/checkout@v2
     - name: Test in FreeBSD
